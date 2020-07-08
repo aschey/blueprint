@@ -106,12 +106,12 @@ Styleguide button
   &[class*="#{$ns}-icon-"] {
     &::before {
       @include pt-icon();
-      color: $pt-icon-color;
+      color: rgba($pt-icon-color, 1);
     }
   }
 
   #{$icon-classes} {
-    color: $pt-icon-color;
+    color: rgba($pt-icon-color, 1);
 
     &.#{$ns}-align-right {
       margin-left: $button-icon-spacing;
@@ -132,11 +132,11 @@ Styleguide button
       @include pt-dark-button();
 
       &[class*="#{$ns}-icon-"]::before {
-        color: $pt-dark-icon-color;
+        color: rgba($pt-dark-icon-color, 1);
       }
 
       #{$icon-classes} {
-        color: $pt-dark-icon-color;
+        color: rgba($pt-dark-icon-color, 1);
       }
     }
 
@@ -181,7 +181,7 @@ a.#{$ns}-button {
   &:hover,
   &:active {
     // override global 'a' styles
-    color: $pt-text-color;
+    color: rgba($pt-text-color, 1);
   }
 
   &.#{$ns}-disabled {

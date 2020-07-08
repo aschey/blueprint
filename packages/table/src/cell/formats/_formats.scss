@@ -52,7 +52,7 @@
     opacity: 1;
 
     .#{$ns}-icon-standard {
-      color: $pt-intent-primary;
+      color: rgba($pt-intent-primary, 1);
     }
   }
 

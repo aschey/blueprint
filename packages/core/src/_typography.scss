@@ -84,10 +84,10 @@ Styleguide ui-text
 // NOTE: .#{$ns}-text-large defined below after .#{$ns}-running-text
 
 .#{$ns}-text-muted {
-  color: $pt-text-color-muted;
+  color: rgba($pt-text-color-muted, 1);
 
   .#{$ns}-dark & {
-    color: $pt-dark-text-color-muted;
+    color: rgba($pt-dark-text-color-muted, 1);
   }
 }
 
@@ -207,11 +207,11 @@ Styleguide typography.links
 */
 
 a {
-  color: $pt-link-color;
+  color: rgba($pt-link-color, 1);
   text-decoration: none;
 
   &:hover {
-    color: $pt-link-color;
+    color: rgba($pt-link-color, 1);
     cursor: pointer;
     text-decoration: underline;
   }
@@ -227,7 +227,7 @@ a {
 
   .#{$ns}-dark &,
   .#{$ns}-dark &:hover {
-    color: $pt-dark-link-color;
+    color: rgba($pt-dark-link-color, 1);
 
     #{$icon-classes} {
       color: inherit;
@@ -263,20 +263,20 @@ Styleguide preformatted
 
   border-radius: $pt-border-radius;
   box-shadow: inset border-shadow(0.2);
-  color: $pt-code-text-color;
+  color: rgba($pt-code-text-color, 1);
   font-size: smaller;
   padding: 2px 5px;
 
   .#{$ns}-dark & {
     background: $pt-dark-code-background-color;
     box-shadow: inset border-shadow(0.4);
-    color: $pt-dark-code-text-color;
+    color: rgba($pt-dark-code-text-color, 1);
   }
 
   a > & {
     // <code> in links. markdown: [`code`](http://url)
     // $pt-link-color does not have good contrast with non-link <code>'s in light theme, so we use a brighter hue
-    color: $pt-intent-primary;
+    color: rgba($pt-intent-primary, 1);
 
     .#{$ns}-dark & {
       color: inherit;
@@ -289,7 +289,7 @@ Styleguide preformatted
   background: $pt-code-background-color;
   border-radius: $pt-border-radius;
   box-shadow: inset 0 0 0 1px $pt-divider-black;
-  color: $pt-text-color;
+  color: rgba($pt-text-color, 1);
 
   display: block;
   font-size: $pt-font-size - 1px;
@@ -302,7 +302,7 @@ Styleguide preformatted
   .#{$ns}-dark & {
     background: $pt-dark-code-background-color;
     box-shadow: inset 0 0 0 1px $pt-dark-divider-black;
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
   }
 
   > code {
@@ -324,10 +324,10 @@ Styleguide preformatted
 
 %keyboard {
   align-items: center;
-  background: $white;
+  background: rgba($white, 1);
   border-radius: $pt-border-radius;
   box-shadow: $pt-elevation-shadow-1;
-  color: $pt-text-color-muted;
+  color: rgba($pt-text-color-muted, 1);
   display: inline-flex;
   font-family: inherit;
   font-size: $pt-font-size-small;
@@ -343,9 +343,9 @@ Styleguide preformatted
   }
 
   .#{$ns}-dark & {
-    background: $dark-gray5;
+    background: rgba($dark-gray5, 1);
     box-shadow: $pt-dark-elevation-shadow-1;
-    color: $pt-dark-text-color-muted;
+    color: rgba($pt-dark-text-color-muted, 1);
   }
 }
 
@@ -455,5 +455,5 @@ Styleguide rtl
 }
 
 .#{$ns}-dark {
-  color: $pt-dark-text-color;
+  color: rgba($pt-dark-text-color, 1);
 }

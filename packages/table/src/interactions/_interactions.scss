@@ -77,22 +77,22 @@ $reorder-handle-width: 22px !default;
   width: $reorder-handle-width;
 
   &:hover {
-    color: $pt-icon-color-hover;
+    color: rgba($pt-icon-color-hover, 1);
   }
 
   &:active {
-    color: $pt-intent-primary;
+    color: rgba($pt-intent-primary, 1);
   }
 
   .#{$ns}-dark & {
     color: $pt-dark-text-color-disabled;
 
     &:hover {
-      color: $pt-dark-icon-color-hover;
+      color: rgba($pt-dark-icon-color-hover, 1);
     }
 
     &:active {
-      color: $pt-intent-primary;
+      color: rgba($pt-intent-primary, 1);
     }
   }
 }
@@ -136,12 +136,12 @@ $reorder-handle-width: 22px !default;
 }
 
 .#{$ns}-table-resize-handle {
-  background-color: $resize-handle-color;
+  background-color: rgba($resize-handle-color, 1);
   position: absolute;
   z-index: $pt-z-index-overlay;
 
   &.#{$ns}-table-dragging {
-    background-color: $resize-handle-dragging-color;
+    background-color: rgba($resize-handle-dragging-color, 1);
   }
 }
 
@@ -160,7 +160,7 @@ $reorder-handle-width: 22px !default;
 }
 
 .#{$ns}-table-resize-guides .#{$ns}-table-horizontal-guide {
-  background-color: $resize-handle-dragging-color;
+  background-color: rgba($resize-handle-dragging-color, 1);
   height: $resize-handle-width;
   margin-top: $resize-handle-position-correction;
 
@@ -170,7 +170,7 @@ $reorder-handle-width: 22px !default;
 }
 
 .#{$ns}-table-resize-guides .#{$ns}-table-vertical-guide {
-  background-color: $resize-handle-dragging-color;
+  background-color: rgba($resize-handle-dragging-color, 1);
   margin-left: $resize-handle-position-correction;
   width: $resize-handle-width;
 

@@ -34,20 +34,20 @@
 
 .#{$ns}-table-striped {
   .#{$ns}-table-cell-ledger-even {
-    background-color: $cell-background-color;
+    background-color: rgba($cell-background-color, 1);
   }
 
   .#{$ns}-table-cell-ledger-odd {
-    background-color: mix($table-background-color, $cell-background-color, 50%);
+    background-color: rgba(mix($table-background-color, $cell-background-color, 50%), 1);
   }
 
   .#{$ns}-dark & {
     .#{$ns}-table-cell-ledger-even {
-      background-color: $dark-cell-background-color;
+      background-color: rgba($dark-cell-background-color, 1);
     }
 
     .#{$ns}-table-cell-ledger-odd {
-      background-color: mix($dark-table-background-color, $dark-cell-background-color, 50%);
+      background-color: rgba(mix($dark-table-background-color, $dark-cell-background-color, 50%), 1);
     }
   }
 }

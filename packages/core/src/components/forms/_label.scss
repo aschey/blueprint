@@ -102,7 +102,7 @@ label.#{$ns}-label {
   }
 
   .#{$ns}-dark & {
-    color: $pt-dark-heading-color;
+    color: rgba($pt-dark-heading-color, 1);
 
     &.#{$ns}-disabled {
       &,

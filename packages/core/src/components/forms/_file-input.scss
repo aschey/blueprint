@@ -63,11 +63,11 @@ $file-input-button-padding-large: ($pt-input-height-large - $pt-button-height) /
 
   &.#{$ns}-file-input-has-selection {
     .#{$ns}-file-upload-input {
-      color: $pt-text-color;
+      color: rgba($pt-text-color, 1);
     }
 
     .#{$ns}-dark & .#{$ns}-file-upload-input {
-      color: $pt-dark-text-color;
+      color: rgba($pt-dark-text-color, 1);
     }
   }
 

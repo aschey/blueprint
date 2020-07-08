@@ -20,7 +20,7 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
 // react-day-picker does not conform to our naming scheme
 // stylelint-disable selector-class-pattern
 .#{$ns}-datepicker {
-  background: $datepicker-background-color;
+  background: rgba($datepicker-background-color, 1);
   border-radius: $pt-border-radius;
   display: flex;
   padding: $datepicker-padding;
@@ -111,21 +111,21 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
 
     &:hover,
     &:focus {
-      background: $datepicker-day-background-color-hover;
-      color: $pt-text-color;
+      background: rgba($datepicker-day-background-color-hover, 1);
+      color: rgba($pt-text-color, 1);
     }
 
     &:active {
-      background: $datepicker-day-background-color-active;
+      background: rgba($datepicker-day-background-color-active, 1);
     }
 
     &.DayPicker-Day--selected {
-      background-color: $blue3;
+      background-color: rgba($blue3, 1);
       border-radius: $pt-border-radius;
-      color: $white;
+      color: rgba($white, 1);
 
       &:hover {
-        background-color: $blue2;
+        background-color: rgba($blue2, 1);
       }
     }
 
@@ -197,7 +197,7 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
 }
 
 .#{$ns}-dark .#{$ns}-datepicker {
-  background: $dark-datepicker-background-color;
+  background: rgba($dark-datepicker-background-color, 1);
 
   .DayPicker-WeekNumber {
     color: $pt-dark-text-color-disabled;
@@ -216,19 +216,19 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
 
     &:hover,
     &:focus {
-      background: $dark-datepicker-day-background-color-hover;
-      color: $white;
+      background: rgba($dark-datepicker-day-background-color-hover, 1);
+      color: rgba($white, 1);
     }
 
     &:active {
-      background: $dark-datepicker-day-background-color-active;
+      background: rgba($dark-datepicker-day-background-color-active, 1);
     }
 
     &.DayPicker-Day--selected {
-      background-color: $blue3;
+      background-color: rgba($blue3, 1);
 
       &:hover {
-        background-color: $blue4;
+        background-color: rgba($blue4, 1);
       }
     }
 

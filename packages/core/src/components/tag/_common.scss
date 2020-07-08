@@ -23,11 +23,11 @@ $tag-round-adjustment: 2px !default;
   @include pt-tag-interactive($tag-default-color, 1);
   @include pt-flex-container(row, $tag-icon-spacing, inline);
   align-items: center;
-  background-color: $tag-default-color;
+  background-color: rgba($tag-default-color, 1);
   border: none;
   border-radius: $pt-border-radius;
   box-shadow: none;
-  color: $pt-dark-text-color;
+  color: rgba($pt-dark-text-color, 1);
   font-size: $pt-font-size-small;
   line-height: $tag-line-height;
   max-width: 100%;
@@ -51,8 +51,8 @@ $tag-round-adjustment: 2px !default;
   .#{$ns}-dark & {
     @include pt-tag-interactive($dark-tag-default-color, 1);
 
-    background-color: $dark-tag-default-color;
-    color: $pt-text-color;
+    background-color: rgba($dark-tag-default-color, 1);
+    color: rgba($pt-text-color, 1);
 
     > #{$icon-classes} {
       fill: currentColor;
@@ -82,8 +82,8 @@ $tag-round-adjustment: 2px !default;
 @mixin pt-tag-intent($background-color, $text-color: $white) {
   @include pt-tag-interactive($background-color, 1);
 
-  background: $background-color;
-  color: $text-color;
+  background: rgba($background-color, 1);
+  color: rgba($text-color, 1);
 }
 
 @mixin pt-tag-minimal() {
@@ -95,12 +95,12 @@ $tag-round-adjustment: 2px !default;
     @include pt-tag-minimal-interactive($tag-default-color, 0.2);
 
     background-color: rgba($gray3, 0.2);
-    color: $pt-text-color;
+    color: rgba($pt-text-color, 1);
 
     .#{$ns}-dark & {
       @include pt-tag-minimal-interactive($dark-tag-default-color, 0.2);
 
-      color: $pt-dark-text-color;
+      color: rgba($pt-dark-text-color, 1);
 
       > #{$icon-classes} {
         fill: $pt-dark-icon-color;
@@ -113,7 +113,7 @@ $tag-round-adjustment: 2px !default;
   @include pt-tag-minimal-interactive($background-color, 0.15);
 
   background-color: rgba($background-color, 0.15);
-  color: $text-color;
+  color: rgba($text-color, 1);
 
   > #{$icon-classes} {
     fill: $background-color;
@@ -123,7 +123,7 @@ $tag-round-adjustment: 2px !default;
     @include pt-tag-minimal-interactive($background-color, 0.25);
 
     background-color: rgba($background-color, 0.25);
-    color: $dark-text-color;
+    color: rgba($dark-text-color, 1);
   }
 }
 

@@ -46,7 +46,7 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
 
 .#{$ns}-tree {
   #{$icon-classes} {
-    color: $pt-icon-color;
+    color: rgba($pt-icon-color, 1);
 
     @each $intent, $colors in $pt-intent-colors {
       &.#{$ns}-intent-#{$intent} {
@@ -153,11 +153,11 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
 }
 
 .#{$ns}-tree-node.#{$ns}-tree-node-selected > .#{$ns}-tree-node-content {
-  background-color: $pt-intent-primary;
+  background-color: rgba($pt-intent-primary, 1);
 
   &,
   #{$icon-classes} {
-    color: $white;
+    color: rgba($white, 1);
   }
 
   .#{$ns}-tree-node-caret {
@@ -166,7 +166,7 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
     }
 
     &:hover::before {
-      color: $white;
+      color: rgba($white, 1);
     }
   }
 }
@@ -178,7 +178,7 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
 
   .#{$ns}-tree {
     #{$icon-classes} {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
 
       @each $intent, $colors in $pt-intent-colors {
         &.#{$ns}-intent-#{$intent} {
@@ -189,6 +189,6 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
   }
 
   .#{$ns}-tree-node.#{$ns}-tree-node-selected > .#{$ns}-tree-node-content {
-    background-color: $pt-intent-primary;
+    background-color: rgba($pt-intent-primary, 1);
   }
 }

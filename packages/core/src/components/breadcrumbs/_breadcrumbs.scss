@@ -36,7 +36,7 @@ Styleguide breadcrumbs
     display: flex;
 
     &::after {
-      background: svg-icon("16px/chevron-right.svg", (path: (fill: $pt-icon-color)));
+      background: rgba(svg-icon("16px/chevron-right.svg", (path: (fill: $pt-icon-color))), 1);
       content: "";
       display: block;
       height: $pt-icon-size-standard;
@@ -60,7 +60,7 @@ Styleguide breadcrumbs
 
 .#{$ns}-breadcrumb,
 .#{$ns}-breadcrumbs-collapsed {
-  color: $pt-text-color-muted;
+  color: rgba($pt-text-color-muted, 1);
 }
 
 .#{$ns}-breadcrumb {
@@ -90,7 +90,7 @@ Styleguide breadcrumbs
 }
 
 .#{$ns}-breadcrumbs-collapsed {
-  background: $light-gray1;
+  background: rgba($light-gray1, 1);
   border: none;
   border-radius: $pt-border-radius;
   cursor: pointer;
@@ -99,7 +99,7 @@ Styleguide breadcrumbs
   vertical-align: text-bottom;
 
   &::before {
-    background: svg-icon("16px/more.svg", (circle: (fill: $pt-icon-color))) center no-repeat;
+    background: rgba(svg-icon("16px/more.svg", (circle: (fill: $pt-icon-color))) center no-repeat, 1);
     content: "";
     display: block;
     height: $pt-icon-size-standard;
@@ -107,8 +107,8 @@ Styleguide breadcrumbs
   }
 
   &:hover {
-    background: $gray5;
-    color: $pt-text-color;
+    background: rgba($gray5, 1);
+    color: rgba($pt-text-color, 1);
     text-decoration: none;
   }
 }
@@ -116,11 +116,11 @@ Styleguide breadcrumbs
 .#{$ns}-dark {
   .#{$ns}-breadcrumb,
   .#{$ns}-breadcrumbs-collapsed {
-    color: $pt-dark-text-color-muted;
+    color: rgba($pt-dark-text-color-muted, 1);
   }
 
   .#{$ns}-breadcrumbs > li::after {
-    color: $pt-dark-icon-color;
+    color: rgba($pt-dark-icon-color, 1);
   }
 
   .#{$ns}-breadcrumb.#{$ns}-disabled {
@@ -128,7 +128,7 @@ Styleguide breadcrumbs
   }
 
   .#{$ns}-breadcrumb-current {
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
   }
 
   .#{$ns}-breadcrumbs-collapsed {
@@ -136,7 +136,7 @@ Styleguide breadcrumbs
 
     &:hover {
       background: rgba($black, 0.6);
-      color: $pt-dark-text-color;
+      color: rgba($pt-dark-text-color, 1);
     }
   }
 }

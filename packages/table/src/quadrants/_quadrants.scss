@@ -19,14 +19,14 @@ $table-quadrant-scroll-container-overflow: 20px;
 }
 
 .#{$ns}-table-quadrant {
-  background: $table-background-color;
+  background: rgba($table-background-color, 1);
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
 
   .#{$ns}-dark & {
-    background-color: $dark-table-background-color;
+    background-color: rgba($dark-table-background-color, 1);
   }
 }
 
@@ -75,7 +75,7 @@ $table-quadrant-scroll-container-overflow: 20px;
   }
 
   .#{$ns}-table-cell-client {
-    background: $white;
+    background: rgba($white, 1);
   }
 }
 

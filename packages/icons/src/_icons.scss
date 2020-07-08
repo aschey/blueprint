@@ -29,17 +29,17 @@ $icon-classes: (
 }
 
 @mixin pt-icon-colors() {
-  color: $pt-icon-color;
+  color: rgba($pt-icon-color, 1);
 
   &:hover {
-    color: $pt-icon-color-hover;
+    color: rgba($pt-icon-color-hover, 1);
   }
 
   .#{$ns}-dark & {
-    color: $pt-dark-icon-color;
+    color: rgba($pt-dark-icon-color, 1);
 
     &:hover {
-      color: $pt-dark-icon-color-hover;
+      color: rgba($pt-dark-icon-color-hover, 1);
     }
   }
 }

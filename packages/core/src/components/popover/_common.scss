@@ -136,8 +136,8 @@ $dark-popover-background-color: $dark-gray4 !default;
   box-shadow: $shadows;
 
   .#{$ns}-popover-content {
-    background: $background-color;
-    color: $text-color;
+    background: rgba($background-color, 1);
+    color: rgba($text-color, 1);
   }
 
   .#{$ns}-popover-arrow::before {

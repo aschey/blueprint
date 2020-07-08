@@ -21,7 +21,7 @@ $tag-input-icon-padding-large: ($pt-input-height-large - $pt-icon-size-large) / 
   padding-right: 0;
 
   .#{$ns}-tag-input-icon {
-    color: $pt-icon-color;
+    color: rgba($pt-icon-color, 1);
     margin-left: $tag-input-icon-padding - $tag-input-padding;
     margin-right: $tag-input-icon-padding;
     // margins to center icon in one-line input
@@ -111,7 +111,7 @@ $tag-input-icon-padding-large: ($pt-input-height-large - $pt-icon-size-large) / 
   }
 
   &.#{$ns}-active {
-    background-color: $input-background-color;
+    background-color: rgba($input-background-color, 1);
     box-shadow: input-transition-shadow($input-shadow-color-focus, true), $input-box-shadow-focus;
 
     @each $intent, $color in $pt-intent-text-colors {
@@ -124,13 +124,13 @@ $tag-input-icon-padding-large: ($pt-input-height-large - $pt-icon-size-large) / 
   .#{$ns}-dark &,
   &.#{$ns}-dark {
     .#{$ns}-tag-input-icon {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
     }
 
     .#{$ns}-input-ghost {
       @include pt-dark-input-placeholder();
 
-      color: $dark-input-color;
+      color: rgba($dark-input-color, 1);
     }
 
     &.#{$ns}-active {

@@ -57,7 +57,7 @@ $track-height: $track-size !default;
 
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
-      background-color: $color;
+      background-color: rgba($color, 1);
     }
   }
 }
@@ -92,7 +92,7 @@ $track-height: $track-size !default;
   }
 
   .#{$ns}-disabled & {
-    background: $gray5;
+    background: rgba($gray5, 1);
     box-shadow: none;
     // easy way to avoid lots of special cases to ignore mouse states when disabled:
     pointer-events: none;
@@ -103,31 +103,31 @@ $track-height: $track-size !default;
 
     &,
     &:hover {
-      background-color: $dark-gray5;
+      background-color: rgba($dark-gray5, 1);
     }
 
     &.#{$ns}-active {
-      background-color: $dark-gray3;
+      background-color: rgba($dark-gray3, 1);
     }
   }
 
   .#{$ns}-dark .#{$ns}-disabled & {
-    background: $gray1;
-    border-color: $gray1;
+    background: rgba($gray1, 1);
+    border-color: rgba($gray1, 1);
     box-shadow: none;
   }
 
   .#{$ns}-slider-label {
-    background: $tooltip-background-color;
+    background: rgba($tooltip-background-color, 1);
     border-radius: $pt-border-radius;
     box-shadow: $pt-tooltip-box-shadow;
-    color: $tooltip-text-color;
+    color: rgba($tooltip-text-color, 1);
     margin-left: $handle-size / 2;
 
     .#{$ns}-dark & {
-      background: $dark-tooltip-background-color;
+      background: rgba($dark-tooltip-background-color, 1);
       box-shadow: $pt-dark-tooltip-box-shadow;
-      color: $dark-tooltip-text-color;
+      color: rgba($dark-tooltip-text-color, 1);
     }
 
     .#{$ns}-disabled & {

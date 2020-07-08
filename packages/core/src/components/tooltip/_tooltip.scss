@@ -44,8 +44,8 @@
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
       .#{$ns}-popover-content {
-        background: $color;
-        color: $white;
+        background: rgba($color, 1);
+        color: rgba($white, 1);
       }
 
       .#{$ns}-popover-arrow-fill {

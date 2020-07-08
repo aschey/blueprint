@@ -36,7 +36,7 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
   }
 
   .#{$ns}-timepicker-input-row {
-    background: $input-background-color;
+    background: rgba($input-background-color, 1);
     border-radius: $pt-border-radius;
     box-shadow: $pt-input-box-shadow;
     display: inline-block;
@@ -47,7 +47,7 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
   }
 
   .#{$ns}-timepicker-divider-text {
-    color: $pt-text-color-muted;
+    color: rgba($pt-text-color-muted, 1);
     display: inline-block;
     font-size: $pt-font-size-large;
     text-align: center;
@@ -59,7 +59,7 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
     border: 0;
     border-radius: $pt-border-radius;
     box-shadow: input-transition-shadow($input-shadow-color-focus);
-    color: $pt-text-color;
+    color: rgba($pt-text-color, 1);
     height: $timepicker-input-row-inner-height;
     outline: 0;
     padding: 0;
@@ -112,11 +112,11 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
   }
 
   .#{$ns}-timepicker-divider-text {
-    color: $pt-dark-text-color-muted;
+    color: rgba($pt-dark-text-color-muted, 1);
   }
 
   .#{$ns}-timepicker-input {
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
   }
 }
 

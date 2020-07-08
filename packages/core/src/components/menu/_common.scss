@@ -79,7 +79,7 @@ $dark-menu-item-color-active: $dark-minimal-button-background-color-active !defa
 @mixin menu-item-intent($text-colors: $pt-intent-text-colors) {
   @each $intent, $color in $text-colors {
     &.#{$ns}-intent-#{$intent} {
-      color: $color;
+      color: rgba($color, 1);
 
       .#{$ns}-icon {
         color: inherit;
@@ -88,16 +88,16 @@ $dark-menu-item-color-active: $dark-minimal-button-background-color-active !defa
       &::before,
       &::after,
       .#{$ns}-menu-item-label {
-        color: $color;
+        color: rgba($color, 1);
       }
 
       &:hover,
       &.#{$ns}-active {
-        background-color: nth(map-get($button-intents, $intent), 1);
+        background-color: rgba(nth(map-get($button-intents, $intent), 1), 1);
       }
 
       &:active {
-        background-color: nth(map-get($button-intents, $intent), 2);
+        background-color: rgba(nth(map-get($button-intents, $intent), 2), 1);
       }
 
       &:hover,
@@ -107,7 +107,7 @@ $dark-menu-item-color-active: $dark-minimal-button-background-color-active !defa
         &::before,
         &::after,
         .#{$ns}-menu-item-label {
-          color: $white;
+          color: rgba($white, 1);
         }
       }
     }

@@ -62,7 +62,7 @@ $dialog-padding: $pt-grid-size * 2 !default;
 }
 
 .#{$ns}-dialog {
-  background: $light-gray4;
+  background: rgba($light-gray4, 1);
   border-radius: $dialog-border-radius;
   box-shadow: $pt-dialog-box-shadow;
   display: flex;
@@ -79,15 +79,15 @@ $dialog-padding: $pt-grid-size * 2 !default;
 
   &.#{$ns}-dark,
   .#{$ns}-dark & {
-    background: $pt-dark-app-background-color;
+    background: rgba($pt-dark-app-background-color, 1);
     box-shadow: $pt-dark-dialog-box-shadow;
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
   }
 }
 
 .#{$ns}-dialog-header {
   align-items: center;
-  background: $white;
+  background: rgba($white, 1);
   border-radius: $dialog-border-radius $dialog-border-radius 0 0;
   box-shadow: 0 1px 0 $pt-divider-black;
   display: flex;
@@ -98,7 +98,7 @@ $dialog-padding: $pt-grid-size * 2 !default;
 
   .#{$ns}-icon-large,
   .#{$ns}-icon {
-    color: $pt-icon-color;
+    color: rgba($pt-icon-color, 1);
     flex: 0 0 auto;
     margin-right: $dialog-padding / 2;
   }
@@ -115,12 +115,12 @@ $dialog-padding: $pt-grid-size * 2 !default;
   }
 
   .#{$ns}-dark & {
-    background: $dark-gray4;
+    background: rgba($dark-gray4, 1);
     box-shadow: 0 1px 0 $pt-dark-divider-black;
 
     .#{$ns}-icon-large,
     .#{$ns}-icon {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
     }
   }
 }

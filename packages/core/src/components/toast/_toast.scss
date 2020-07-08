@@ -50,7 +50,7 @@ $toast-margin: $pt-grid-size * 2 !default;
     $after: "~ &"
   );
   align-items: flex-start;
-  background-color: $white;
+  background-color: rgba($white, 1);
   border-radius: $pt-border-radius;
   box-shadow: $pt-elevation-shadow-3;
   display: flex;
@@ -72,18 +72,18 @@ $toast-margin: $pt-grid-size * 2 !default;
   }
 
   > .#{$ns}-icon {
-    color: $pt-icon-color;
+    color: rgba($pt-icon-color, 1);
     margin: ($toast-height - $pt-icon-size-standard) / 2;
     margin-right: 0;
   }
 
   &.#{$ns}-dark,
   .#{$ns}-dark & {
-    background-color: $dark-gray5;
+    background-color: rgba($dark-gray5, 1);
     box-shadow: $pt-dark-elevation-shadow-3;
 
     > .#{$ns}-icon {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
     }
   }
 
@@ -92,12 +92,12 @@ $toast-margin: $pt-grid-size * 2 !default;
       color: rgba($white, 0.7);
 
       &:hover {
-        color: $white;
+        color: rgba($white, 1);
       }
     }
 
     > .#{$ns}-icon {
-      color: $white;
+      color: rgba($white, 1);
     }
   }
 
@@ -118,12 +118,12 @@ $toast-margin: $pt-grid-size * 2 !default;
 
     &:hover {
       background-color: rgba($white, 0.15) !important;
-      color: $white !important;
+      color: rgba($white, 1) !important;
     }
 
     &:active {
       background-color: rgba($white, 0.3) !important;
-      color: $white !important;
+      color: rgba($white, 1) !important;
     }
 
     &::after {
@@ -135,8 +135,8 @@ $toast-margin: $pt-grid-size * 2 !default;
   // define these last so they override default dark colors above
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
-      background-color: $color;
-      color: $white;
+      background-color: rgba($color, 1);
+      color: rgba($white, 1);
     }
   }
 }

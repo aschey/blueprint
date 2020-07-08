@@ -31,19 +31,19 @@ $cell-transition-duration: $pt-transition-duration * 3;
 
   .#{$ns}-dark & {
     &:not([class*="#{$ns}-intent-"]):not(.#{$ns}-loading) {
-      color: $dark-cell-text-color;
+      color: rgba($dark-cell-text-color, 1);
     }
   }
 
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
       background-color: rgba($color, $cell-background-color-opacity);
-      color: map-get($pt-intent-text-colors, $intent);
+      color: rgba(map-get($pt-intent-text-colors, $intent), 1);
     }
 
     .#{$ns}-dark &.#{$ns}-intent-#{$intent} {
       background: rgba($color, $cell-background-color-opacity);
-      color: map-get($pt-dark-intent-text-colors, $intent);
+      color: rgba(map-get($pt-dark-intent-text-colors, $intent), 1);
     }
   }
 }

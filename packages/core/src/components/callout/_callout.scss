@@ -35,7 +35,7 @@ Styleguide callout
 
     &::before {
       @include pt-icon($pt-icon-size-large);
-      color: $pt-icon-color;
+      color: rgba($pt-icon-color, 1);
       left: $pt-grid-size;
       position: absolute;
       top: $pt-grid-size;
@@ -46,7 +46,7 @@ Styleguide callout
     padding-left: ($pt-grid-size * 2) + $pt-icon-size-large;
 
     > .#{$ns}-icon:first-child {
-      color: $pt-icon-color;
+      color: rgba($pt-icon-color, 1);
       left: $pt-grid-size;
       position: absolute;
       top: $pt-grid-size;
@@ -67,7 +67,7 @@ Styleguide callout
     background-color: rgba($gray3, 0.2);
 
     &[class*="#{$ns}-icon-"]::before {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
     }
   }
 
@@ -78,7 +78,7 @@ Styleguide callout
       &[class*="#{$ns}-icon-"]::before,
       > .#{$ns}-icon:first-child,
       .#{$ns}-heading {
-        color: map-get($pt-intent-text-colors, $intent);
+        color: rgba(map-get($pt-intent-text-colors, $intent), 1);
       }
 
       .#{$ns}-dark & {
@@ -87,7 +87,7 @@ Styleguide callout
         &[class*="#{$ns}-icon-"]::before,
         > .#{$ns}-icon:first-child,
         .#{$ns}-heading {
-          color: map-get($pt-dark-intent-text-colors, $intent);
+          color: rgba(map-get($pt-dark-intent-text-colors, $intent), 1);
         }
       }
     }

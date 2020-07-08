@@ -33,7 +33,7 @@ $navbar-background-color: $white !default;
 $dark-navbar-background-color: $dark-gray5 !default;
 
 .#{$ns}-navbar {
-  background-color: $navbar-background-color;
+  background-color: rgba($navbar-background-color, 1);
   box-shadow: $pt-elevation-shadow-1;
   height: $pt-navbar-height;
   padding: 0 $navbar-padding;
@@ -43,7 +43,7 @@ $dark-navbar-background-color: $dark-gray5 !default;
 
   &.#{$ns}-dark,
   .#{$ns}-dark & {
-    background-color: $dark-navbar-background-color;
+    background-color: rgba($dark-navbar-background-color, 1);
   }
 
   // shadow for dark navbar in light theme apps

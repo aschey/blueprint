@@ -23,7 +23,7 @@ $menu-z-index: $row-z-index + 1 !default;
 
 .#{$ns}-table-container {
   @include force-hardware-acceleration();
-  background-color: $table-background-color;
+  background-color: rgba($table-background-color, 1);
   display: flex;
   flex-direction: column;
   height: 100%; // IE 11
@@ -33,7 +33,7 @@ $menu-z-index: $row-z-index + 1 !default;
   overflow: hidden;
 
   .#{$ns}-dark & {
-    background-color: $dark-table-background-color;
+    background-color: rgba($dark-table-background-color, 1);
   }
 
   .#{$ns}-loading {
@@ -55,32 +55,32 @@ $menu-z-index: $row-z-index + 1 !default;
 }
 
 .#{$ns}-table-bottom-container {
-  color: $cell-text-color;
+  color: rgba($cell-text-color, 1);
   display: flex;
   flex: 1 1 auto;
   height: 100%; // IE 11
   min-height: 0%; // Must use % unit for IE11
 
   .#{$ns}-dark & {
-    color: $dark-cell-text-color;
+    color: rgba($dark-cell-text-color, 1);
   }
 }
 
 .#{$ns}-table-menu {
-  background-color: $header-background-color;
+  background-color: rgba($header-background-color, 1);
   flex: 0 0 auto;
   // Stay above the moving table-header
   position: relative;
   z-index: $menu-z-index;
 
   .#{$ns}-dark & {
-    background-color: $dark-header-background-color;
+    background-color: rgba($dark-header-background-color, 1);
   }
 }
 
 .#{$ns}-table-column-headers {
-  background-color: $header-background-color;
-  color: $column-header-text-color;
+  background-color: rgba($header-background-color, 1);
+  color: rgba($column-header-text-color, 1);
   display: block;
 
   // allow absolute position for region overlays
@@ -89,14 +89,14 @@ $menu-z-index: $row-z-index + 1 !default;
   z-index: $column-z-index;
 
   .#{$ns}-dark & {
-    background-color: $dark-header-background-color;
-    color: $dark-column-header-text-color;
+    background-color: rgba($dark-header-background-color, 1);
+    color: rgba($dark-column-header-text-color, 1);
   }
 }
 
 .#{$ns}-table-row-headers {
-  background-color: $header-background-color;
-  color: $row-header-text-color;
+  background-color: rgba($header-background-color, 1);
+  color: rgba($row-header-text-color, 1);
   flex: 0 0 auto;
   // allow absolute position for region overlay
   position: relative;
@@ -107,8 +107,8 @@ $menu-z-index: $row-z-index + 1 !default;
   z-index: $row-z-index;
 
   .#{$ns}-dark & {
-    background-color: $dark-header-background-color;
-    color: $dark-row-header-text-color;
+    background-color: rgba($dark-header-background-color, 1);
+    color: rgba($dark-row-header-text-color, 1);
   }
 }
 
@@ -124,10 +124,10 @@ $menu-z-index: $row-z-index + 1 !default;
 }
 
 .#{$ns}-table-cell-client {
-  background: $cell-background-color;
+  background: rgba($cell-background-color, 1);
 
   .#{$ns}-dark & {
-    background: $dark-cell-background-color;
+    background: rgba($dark-cell-background-color, 1);
   }
 }
 

@@ -34,9 +34,9 @@ Styleguide menu
 */
 
 .#{$ns}-menu {
-  background: $menu-background-color;
+  background: rgba($menu-background-color, 1);
   border-radius: $pt-border-radius;
-  color: $pt-text-color;
+  color: rgba($pt-text-color, 1);
   list-style: none;
   margin: 0;
   min-width: $menu-min-width;
@@ -60,12 +60,12 @@ Styleguide menu
 
   &::before,
   > .#{$ns}-icon {
-    color: $pt-icon-color;
+    color: rgba($pt-icon-color, 1);
     margin-top: ($menu-item-line-height - $pt-icon-size-standard) / 2;
   }
 
   .#{$ns}-menu-item-label {
-    color: $pt-text-color-muted;
+    color: rgba($pt-text-color-muted, 1);
   }
 
   &:hover {
@@ -146,8 +146,8 @@ Styleguide menu-header
 // dark theme
 .#{$ns}-dark {
   .#{$ns}-menu {
-    background: $dark-menu-background-color;
-    color: $pt-dark-text-color;
+    background: rgba($dark-menu-background-color, 1);
+    color: rgba($pt-dark-text-color, 1);
   }
 
   .#{$ns}-menu-item {
@@ -155,11 +155,11 @@ Styleguide menu-header
 
     &::before,
     > .#{$ns}-icon {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
     }
 
     .#{$ns}-menu-item-label {
-      color: $pt-dark-text-color-muted;
+      color: rgba($pt-dark-text-color-muted, 1);
     }
 
     &.#{$ns}-active,
@@ -187,7 +187,7 @@ Styleguide menu-header
   }
 
   .#{$ns}-menu-header > h6 {
-    color: $pt-dark-heading-color;
+    color: rgba($pt-dark-heading-color, 1);
   }
 }
 

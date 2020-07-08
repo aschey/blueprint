@@ -22,19 +22,19 @@ $control-indicator-spacing: $pt-grid-size !default;
 
 @mixin control-checked-colors($selector: ":checked") {
   input#{$selector} ~ .#{$ns}-control-indicator {
-    background-color: $control-checked-background-color;
+    background-color: rgba($control-checked-background-color, 1);
     background-image: $button-intent-gradient;
     box-shadow: $button-intent-box-shadow;
-    color: $white;
+    color: rgba($white, 1);
   }
 
   &:hover input#{$selector} ~ .#{$ns}-control-indicator {
-    background-color: $control-checked-background-color-hover;
+    background-color: rgba($control-checked-background-color-hover, 1);
     box-shadow: $button-intent-box-shadow;
   }
 
   input:not(:disabled):active#{$selector} ~ .#{$ns}-control-indicator {
-    background: $control-checked-background-color-active;
+    background: rgba($control-checked-background-color-active, 1);
     box-shadow: $button-intent-box-shadow-active;
   }
 
@@ -49,12 +49,12 @@ $control-indicator-spacing: $pt-grid-size !default;
     }
 
     &:hover input#{$selector} ~ .#{$ns}-control-indicator {
-      background-color: $control-checked-background-color-hover;
+      background-color: rgba($control-checked-background-color-hover, 1);
       box-shadow: $dark-button-intent-box-shadow;
     }
 
     input:not(:disabled):active#{$selector} ~ .#{$ns}-control-indicator {
-      background-color: $control-checked-background-color-active;
+      background-color: rgba($control-checked-background-color-active, 1);
       box-shadow: $dark-button-intent-box-shadow-active;
     }
 
@@ -115,7 +115,7 @@ $control-indicator-spacing: $pt-grid-size !default;
 
   .#{$ns}-control-indicator {
     background-clip: padding-box;
-    background-color: $control-background-color;
+    background-color: rgba($control-background-color, 1);
     background-image: $button-gradient;
     border: none;
     box-shadow: $button-box-shadow;
@@ -141,11 +141,11 @@ $control-indicator-spacing: $pt-grid-size !default;
   }
 
   &:hover .#{$ns}-control-indicator {
-    background-color: $control-background-color-hover;
+    background-color: rgba($control-background-color-hover, 1);
   }
 
   input:not(:disabled):active ~ .#{$ns}-control-indicator {
-    background: $control-background-color-active;
+    background: rgba($control-background-color-active, 1);
     box-shadow: $button-box-shadow-active;
   }
 
@@ -324,22 +324,22 @@ $control-indicator-spacing: $pt-grid-size !default;
       $disabled-indicator-color
     ) {
       input#{$selector} ~ .#{$ns}-control-indicator {
-        background: $color;
+        background: rgba($color, 1);
       }
 
       &:hover input#{$selector} ~ .#{$ns}-control-indicator {
-        background: $hover-color;
+        background: rgba($hover-color, 1);
       }
 
       input#{$selector}:not(:disabled):active ~ .#{$ns}-control-indicator {
-        background: $active-color;
+        background: rgba($active-color, 1);
       }
 
       input#{$selector}:disabled ~ .#{$ns}-control-indicator {
-        background: $disabled-color;
+        background: rgba($disabled-color, 1);
 
         &::before {
-          background: $disabled-indicator-color;
+          background: rgba($disabled-indicator-color, 1);
         }
       }
     }
@@ -374,7 +374,7 @@ $control-indicator-spacing: $pt-grid-size !default;
       width: auto;
 
       &::before {
-        background: $switch-indicator-background-color;
+        background: rgba($switch-indicator-background-color, 1);
         border-radius: 50%;
         box-shadow: $button-box-shadow-overlay;
         height: $switch-indicator-size;
@@ -414,7 +414,7 @@ $control-indicator-spacing: $pt-grid-size !default;
       );
 
       .#{$ns}-control-indicator::before {
-        background: $dark-switch-indicator-background-color;
+        background: rgba($dark-switch-indicator-background-color, 1);
         box-shadow: $dark-button-box-shadow;
       }
 
@@ -459,24 +459,24 @@ $control-indicator-spacing: $pt-grid-size !default;
   }
 
   .#{$ns}-dark & {
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
 
     &.#{$ns}-disabled {
       color: $pt-dark-text-color-disabled;
     }
 
     .#{$ns}-control-indicator {
-      background-color: $dark-control-background-color;
+      background-color: rgba($dark-control-background-color, 1);
       background-image: $dark-button-gradient;
       box-shadow: $dark-button-box-shadow;
     }
 
     &:hover .#{$ns}-control-indicator {
-      background-color: $dark-control-background-color-hover;
+      background-color: rgba($dark-control-background-color-hover, 1);
     }
 
     input:not(:disabled):active ~ .#{$ns}-control-indicator {
-      background: $dark-control-background-color-active;
+      background: rgba($dark-control-background-color-active, 1);
       box-shadow: $dark-button-box-shadow-active;
     }
 

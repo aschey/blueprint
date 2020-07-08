@@ -89,7 +89,7 @@ $tab-indicator-width: 3px !default;
 
 .#{$ns}-tab {
   @include overflow-ellipsis();
-  color: $pt-text-color;
+  color: rgba($pt-text-color, 1);
   cursor: pointer;
   flex: 0 0 auto;
   font-size: $pt-font-size;
@@ -126,7 +126,7 @@ $tab-indicator-width: 3px !default;
 
   &[aria-selected="true"],
   &:not([aria-disabled="true"]):hover {
-    color: $tab-color-selected;
+    color: rgba($tab-color-selected, 1);
   }
 
   &:focus {
@@ -158,7 +158,7 @@ $tab-indicator-width: 3px !default;
   transition-timing-function: $pt-transition-ease;
 
   .#{$ns}-tab-indicator {
-    background-color: $tab-color-selected;
+    background-color: rgba($tab-color-selected, 1);
     bottom: 0;
     height: $tab-indicator-width;
     left: 0;
@@ -173,7 +173,7 @@ $tab-indicator-width: 3px !default;
 
 .#{$ns}-dark {
   .#{$ns}-tab {
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
 
     &[aria-disabled="true"] {
       color: $pt-dark-text-color-disabled;
@@ -185,12 +185,12 @@ $tab-indicator-width: 3px !default;
 
     &[aria-selected="true"],
     &:not([aria-disabled="true"]):hover {
-      color: $dark-tab-color-selected;
+      color: rgba($dark-tab-color-selected, 1);
     }
   }
 
   .#{$ns}-tab-indicator {
-    background-color: $dark-tab-color-selected;
+    background-color: rgba($dark-tab-color-selected, 1);
   }
 }
 

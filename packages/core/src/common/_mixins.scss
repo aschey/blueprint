@@ -26,7 +26,7 @@ $pt-dark-intent-text-colors: (
 ) !default;
 
 @mixin intent-color($intentName) {
-  color: map-get($pt-intent-colors, $intentName);
+  color: rgba(map-get($pt-intent-colors, $intentName), 1);
 }
 
 @mixin position-all($position, $value) {
@@ -51,11 +51,11 @@ $pt-dark-intent-text-colors: (
 }
 
 @mixin heading-typography() {
-  color: $pt-heading-color;
+  color: rgba($pt-heading-color, 1);
   font-weight: 600;
 
   .#{$ns}-dark & {
-    color: $pt-dark-heading-color;
+    color: rgba($pt-dark-heading-color, 1);
   }
 }
 

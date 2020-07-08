@@ -15,7 +15,7 @@ $drawer-background-color: $white !default;
 $dark-drawer-background-color: $dark-gray4 !default;
 
 .#{$ns}-drawer {
-  background: $drawer-background-color;
+  background: rgba($drawer-background-color, 1);
   box-shadow: $pt-elevation-shadow-4;
   display: flex;
   flex-direction: column;
@@ -169,9 +169,9 @@ $dark-drawer-background-color: $dark-gray4 !default;
 
   &.#{$ns}-dark,
   .#{$ns}-dark & {
-    background: $dark-drawer-background-color;
+    background: rgba($dark-drawer-background-color, 1);
     box-shadow: $pt-dark-dialog-box-shadow;
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
   }
 }
 
@@ -188,7 +188,7 @@ $dark-drawer-background-color: $dark-gray4 !default;
 
   .#{$ns}-icon-large,
   .#{$ns}-icon {
-    color: $pt-icon-color;
+    color: rgba($pt-icon-color, 1);
     flex: 0 0 auto;
     margin-right: $drawer-padding / 2;
   }
@@ -209,7 +209,7 @@ $dark-drawer-background-color: $dark-gray4 !default;
 
     .#{$ns}-icon-large,
     .#{$ns}-icon {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
     }
   }
 }

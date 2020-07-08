@@ -134,10 +134,10 @@ $button-intents: (
 }
 
 @mixin pt-button() {
-  background-color: $button-background-color;
+  background-color: rgba($button-background-color, 1);
   background-image: $button-gradient;
   box-shadow: $button-box-shadow;
-  color: $pt-text-color;
+  color: rgba($pt-text-color, 1);
 
   &:hover {
     @include pt-button-hover();
@@ -156,12 +156,12 @@ $button-intents: (
 
 @mixin pt-button-hover() {
   background-clip: padding-box;
-  background-color: $button-background-color-hover;
+  background-color: rgba($button-background-color-hover, 1);
   box-shadow: $button-box-shadow;
 }
 
 @mixin pt-button-active() {
-  background-color: $button-background-color-active;
+  background-color: rgba($button-background-color-active, 1);
   background-image: none;
   box-shadow: $button-box-shadow-active;
 }
@@ -181,25 +181,25 @@ $button-intents: (
 }
 
 @mixin pt-button-intent($default-color, $hover-color, $active-color) {
-  background-color: $default-color;
+  background-color: rgba($default-color, 1);
   background-image: $button-intent-gradient;
   box-shadow: $button-intent-box-shadow;
-  color: $white;
+  color: rgba($white, 1);
 
   &:hover,
   &:active,
   &.#{$ns}-active {
-    color: $white;
+    color: rgba($white, 1);
   }
 
   &:hover {
-    background-color: $hover-color;
+    background-color: rgba($hover-color, 1);
     box-shadow: $button-intent-box-shadow;
   }
 
   &:active,
   &.#{$ns}-active {
-    background-color: $active-color;
+    background-color: rgba($active-color, 1);
     background-image: none;
     box-shadow: $button-intent-box-shadow-active;
   }
@@ -219,15 +219,15 @@ $button-intents: (
 }
 
 @mixin pt-dark-button() {
-  background-color: $dark-button-background-color;
+  background-color: rgba($dark-button-background-color, 1);
   background-image: $dark-button-gradient;
   box-shadow: $dark-button-box-shadow;
-  color: $pt-dark-text-color;
+  color: rgba($pt-dark-text-color, 1);
 
   &:hover,
   &:active,
   &.#{$ns}-active {
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
   }
 
   &:hover {
@@ -251,12 +251,12 @@ $button-intents: (
 }
 
 @mixin pt-dark-button-hover() {
-  background-color: $dark-button-background-color-hover;
+  background-color: rgba($dark-button-background-color-hover, 1);
   box-shadow: $dark-button-box-shadow;
 }
 
 @mixin pt-dark-button-active() {
-  background-color: $dark-button-background-color-active;
+  background-color: rgba($dark-button-background-color-active, 1);
   background-image: none;
   box-shadow: $dark-button-box-shadow-active;
 }
@@ -297,13 +297,13 @@ $button-intents: (
 }
 
 @mixin pt-button-minimal() {
-  background: $minimal-button-background-color;
+  background: rgba($minimal-button-background-color, 1);
   box-shadow: none;
 
   &:hover {
     background: $minimal-button-background-color-hover;
     box-shadow: none;
-    color: $pt-text-color;
+    color: rgba($pt-text-color, 1);
     text-decoration: none;
   }
 
@@ -311,7 +311,7 @@ $button-intents: (
   &.#{$ns}-active {
     background: $minimal-button-background-color-active;
     box-shadow: none;
-    color: $pt-text-color;
+    color: rgba($pt-text-color, 1);
   }
 
   &:disabled,
@@ -343,7 +343,7 @@ $button-intents: (
 }
 
 @mixin pt-dark-button-minimal() {
-  background: $dark-minimal-button-background-color;
+  background: rgba($dark-minimal-button-background-color, 1);
   box-shadow: none;
   color: inherit;
 
@@ -361,7 +361,7 @@ $button-intents: (
   &:active,
   &.#{$ns}-active {
     background: $dark-minimal-button-background-color-active;
-    color: $pt-dark-text-color;
+    color: rgba($pt-dark-text-color, 1);
   }
 
   &:disabled,
@@ -379,25 +379,25 @@ $button-intents: (
 }
 
 @mixin pt-button-minimal-intent($intent-color, $text-color, $dark-text-color) {
-  color: $text-color;
+  color: rgba($text-color, 1);
 
   &:hover,
   &:active,
   &.#{$ns}-active {
     background: none;
     box-shadow: none;
-    color: $text-color;
+    color: rgba($text-color, 1);
   }
 
   &:hover {
     background: rgba($intent-color, 0.15);
-    color: $text-color;
+    color: rgba($text-color, 1);
   }
 
   &:active,
   &.#{$ns}-active {
     background: rgba($intent-color, 0.3);
-    color: $text-color;
+    color: rgba($text-color, 1);
   }
 
   &:disabled,
@@ -415,17 +415,17 @@ $button-intents: (
   }
 
   .#{$ns}-dark & {
-    color: $dark-text-color;
+    color: rgba($dark-text-color, 1);
 
     &:hover {
       background: rgba($intent-color, 0.2);
-      color: $dark-text-color;
+      color: rgba($dark-text-color, 1);
     }
 
     &:active,
     &.#{$ns}-active {
       background: rgba($intent-color, 0.3);
-      color: $dark-text-color;
+      color: rgba($dark-text-color, 1);
     }
 
     &:disabled,

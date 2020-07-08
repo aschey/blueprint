@@ -45,17 +45,17 @@
       // need to disable hover styles for all variants of selected dates
       // stylelint-disable max-line-length
       &:not(.DayPicker-Day--selected):not(.DayPicker-Day--selected-range):not(.DayPicker-Day--selected-range-start):not(.DayPicker-Day--selected-range-end) {
-        background-color: $daterangepicker-range-background-color;
+        background-color: rgba($daterangepicker-range-background-color, 1);
       }
       // stylelint-enable max-line-length
     }
 
     &--selected-range {
-      background-color: $daterangepicker-range-background-color-selected;
+      background-color: rgba($daterangepicker-range-background-color-selected, 1);
       border-radius: 0;
 
       &:hover {
-        background-color: $daterangepicker-range-background-color-selected-hover;
+        background-color: rgba($daterangepicker-range-background-color-selected-hover, 1);
       }
     }
 
@@ -89,16 +89,16 @@
         // same for dark theme
         // stylelint-disable max-line-length
         &:not(.DayPicker-Day--selected):not(.DayPicker-Day--selected-range):not(.DayPicker-Day--selected-range-start):not(.DayPicker-Day--selected-range-end) {
-          background-color: $dark-daterangepicker-range-background-color;
+          background-color: rgba($dark-daterangepicker-range-background-color, 1);
         }
         // stylelint-enable max-line-length
       }
 
       &--selected-range {
-        background-color: $dark-daterangepicker-range-background-color-selected;
+        background-color: rgba($dark-daterangepicker-range-background-color-selected, 1);
 
         &:hover {
-          background-color: $dark-daterangepicker-range-background-color-selected-hover;
+          background-color: rgba($dark-daterangepicker-range-background-color-selected-hover, 1);
         }
       }
     }

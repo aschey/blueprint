@@ -93,7 +93,7 @@ $input-button-height-small: $pt-button-height-smaller !default;
   // direct descendant to exclude icons in buttons
   > .#{$ns}-input-left-container > .#{$ns}-icon,
   > .#{$ns}-icon {
-    color: $pt-icon-color;
+    color: rgba($pt-icon-color, 1);
 
     &:empty {
       @include pt-icon($pt-icon-size-standard);
@@ -117,16 +117,16 @@ $input-button-height-small: $pt-button-height-smaller !default;
   .#{$ns}-input:not(:focus) + .#{$ns}-button,
   .#{$ns}-input:not(:focus) + .#{$ns}-input-action .#{$ns}-button {
     &.#{$ns}-minimal:not(:hover):not(:focus) {
-      color: $pt-text-color-muted;
+      color: rgba($pt-text-color-muted, 1);
 
       // same goes for dark
       // stylelint-disable-next-line selector-max-compound-selectors
       .#{$ns}-dark & {
-        color: $pt-dark-text-color-muted;
+        color: rgba($pt-dark-text-color-muted, 1);
       }
 
       #{$icon-classes} {
-        color: $pt-icon-color;
+        color: rgba($pt-icon-color, 1);
       }
     }
 
@@ -221,7 +221,7 @@ $input-button-height-small: $pt-button-height-smaller !default;
 
   .#{$ns}-dark & {
     .#{$ns}-icon {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
     }
 
     &.#{$ns}-disabled .#{$ns}-icon {
@@ -236,10 +236,10 @@ $input-button-height-small: $pt-button-height-smaller !default;
       }
 
       > .#{$ns}-icon {
-        color: map-get($pt-intent-text-colors, $intent);
+        color: rgba(map-get($pt-intent-text-colors, $intent), 1);
 
         .#{$ns}-dark & {
-          color: map-get($pt-dark-intent-text-colors, $intent);
+          color: rgba(map-get($pt-dark-intent-text-colors, $intent), 1);
         }
       }
     }

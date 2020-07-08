@@ -40,7 +40,7 @@
 }
 
 %pt-select-arrow {
-  color: $pt-icon-color;
+  color: rgba($pt-icon-color, 1);
   pointer-events: none;
   position: absolute;
   right: $input-padding-horizontal * 0.7;

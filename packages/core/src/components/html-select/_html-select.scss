@@ -81,8 +81,8 @@ Styleguide select
     }
 
     option {
-      background-color: $dark-popover-background-color;
-      color: $pt-dark-text-color;
+      background-color: rgba($dark-popover-background-color, 1);
+      color: rgba($pt-dark-text-color, 1);
     }
 
     option:disabled {
@@ -90,7 +90,7 @@ Styleguide select
     }
 
     &::after {
-      color: $pt-dark-icon-color;
+      color: rgba($pt-dark-icon-color, 1);
     }
   }
 }

@@ -62,12 +62,12 @@ $dark-table-border-color: $pt-dark-divider-white !default;
   }
 
   th {
-    color: $pt-heading-color;
+    color: rgba($pt-heading-color, 1);
     font-weight: 600;
   }
 
   td {
-    color: $pt-text-color;
+    color: rgba($pt-text-color, 1);
   }
 
   tbody tr:first-child {
@@ -81,11 +81,11 @@ $dark-table-border-color: $pt-dark-divider-white !default;
   // stylelint-disable selector-max-compound-selectors
   .#{$ns}-dark & {
     th {
-      color: $pt-dark-heading-color;
+      color: rgba($pt-dark-heading-color, 1);
     }
 
     td {
-      color: $pt-dark-text-color;
+      color: rgba($pt-dark-text-color, 1);
     }
 
     tbody tr:first-child {

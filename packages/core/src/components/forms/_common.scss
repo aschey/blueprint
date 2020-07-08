@@ -85,11 +85,11 @@ $control-group-stack: (
 @mixin pt-input() {
   @include pt-input-placeholder();
   appearance: none;
-  background: $input-background-color;
+  background: rgba($input-background-color, 1);
   border: none;
   border-radius: $pt-border-radius;
   box-shadow: input-transition-shadow($input-shadow-color-focus), $pt-input-box-shadow;
-  color: $input-color;
+  color: rgba($input-color, 1);
   font-size: $pt-font-size;
   font-weight: $input-font-weight;
   height: $pt-input-height;
@@ -181,7 +181,7 @@ $control-group-stack: (
 
   box-shadow: dark-input-transition-shadow($dark-input-shadow-color-focus),
               $pt-dark-input-box-shadow;
-  color: $dark-input-color;
+  color: rgba($dark-input-color, 1);
 
   &:focus {
     box-shadow: dark-input-transition-shadow($dark-input-shadow-color-focus, true),

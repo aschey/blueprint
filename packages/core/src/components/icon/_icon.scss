@@ -36,10 +36,10 @@
 #{$icon-classes} {
   @each $intent, $color in $pt-intent-text-colors {
     &.#{$ns}-intent-#{$intent} {
-      color: $color;
+      color: rgba($color, 1);
 
       .#{$ns}-dark & {
-        color: map-get($pt-dark-intent-text-colors, $intent);
+        color: rgba(map-get($pt-dark-intent-text-colors, $intent), 1);
       }
     }
   }

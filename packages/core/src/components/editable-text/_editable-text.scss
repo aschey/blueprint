@@ -27,7 +27,7 @@
   }
 
   &.#{$ns}-editable-text-editing::before {
-    background-color: $input-background-color;
+    background-color: rgba($input-background-color, 1);
     box-shadow: input-transition-shadow($input-shadow-color-focus, true), $input-box-shadow-focus;
   }
 
@@ -39,7 +39,7 @@
     &.#{$ns}-intent-#{$intent} {
       .#{$ns}-editable-text-input,
       .#{$ns}-editable-text-content {
-        color: $color;
+        color: rgba($color, 1);
       }
 
       &:hover::before {
@@ -71,7 +71,7 @@
     @each $intent, $color in $pt-dark-intent-text-colors {
       &.#{$ns}-intent-#{$intent} {
         .#{$ns}-editable-text-content {
-          color: $color;
+          color: rgba($color, 1);
         }
 
         &:hover::before {
