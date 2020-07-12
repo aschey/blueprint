@@ -14,7 +14,7 @@ while True:
                             continue
                         field = tokens[0].replace(':', '').strip()
                         value = tokens[1].replace(';', '').replace('!default', '').strip()
-                        if field.startswith('$') and ((value.startswith('rgba(') or value in ignore_colors) and field not in ignore_colors):
+                        if field.startswith('$') and ((value.startswith('rgba(') or value == 'none' or value in ignore_colors) and field not in ignore_colors):
                             found = True
                             ignore_colors.append(field)
     if found == False:

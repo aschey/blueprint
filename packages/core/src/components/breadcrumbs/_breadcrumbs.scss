@@ -36,7 +36,7 @@ Styleguide breadcrumbs
     display: flex;
 
     &::after {
-      background: rgba(svg-icon("16px/chevron-right.svg", (path: (fill: $pt-icon-color))), 1);
+      background: svg-icon("16px/chevron-right.svg", (path: (fill: rgba($pt-icon-color, 1))));
       content: "";
       display: block;
       height: $pt-icon-size-standard;
@@ -99,7 +99,7 @@ Styleguide breadcrumbs
   vertical-align: text-bottom;
 
   &::before {
-    background: rgba(svg-icon("16px/more.svg", (circle: (fill: $pt-icon-color))) center no-repeat, 1);
+    background: svg-icon("16px/more.svg", (circle: (fill: rgba($pt-icon-color, 1)))) center no-repeat;
     content: "";
     display: block;
     height: $pt-icon-size-standard;

@@ -297,7 +297,7 @@ $button-intents: (
 }
 
 @mixin pt-button-minimal() {
-  background: rgba($minimal-button-background-color, 1);
+  background: $minimal-button-background-color, 1;
   box-shadow: none;
 
   &:hover {
@@ -343,7 +343,7 @@ $button-intents: (
 }
 
 @mixin pt-dark-button-minimal() {
-  background: rgba($dark-minimal-button-background-color, 1);
+  background: $dark-minimal-button-background-color;
   box-shadow: none;
   color: inherit;
 

@@ -63,7 +63,7 @@ $progress-bar-gradient: linear-gradient(
   width: 100%;
 
   .#{$ns}-progress-meter {
-    background: rgba($progress-bar-gradient, 1);
+    background: $progress-bar-gradient;
     background-color: $progress-head-color;
     background-size: $progress-bar-stripes-size $progress-bar-stripes-size;
     border-radius: $progress-bar-border-radius;

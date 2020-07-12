@@ -189,7 +189,7 @@ $dark-selectable-header-menu-selected-hover-background:
     }
 
     .#{$ns}-table-selection-enabled .#{$ns}-table-header.#{$ns}-table-header-selected & {
-      background-color: rgba($selectable-header-menu-selected-background, 1);
+      background-color: $selectable-header-menu-selected-background;
     }
 
     // dark theme
@@ -207,7 +207,7 @@ $dark-selectable-header-menu-selected-hover-background:
     // need to use a long selector here to properly scope the style
     // stylelint-disable-next-line selector-max-compound-selectors,max-line-length
     .#{$ns}-dark .#{$ns}-table-selection-enabled .#{$ns}-table-header.#{$ns}-table-header-selected & {
-      background-color: rgba($dark-selectable-header-menu-selected-background, 1);
+      background-color: $dark-selectable-header-menu-selected-background;
     }
   }
 
