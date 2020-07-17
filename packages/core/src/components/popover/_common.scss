@@ -137,7 +137,11 @@ $dark-popover-background-color: $dark-gray4 !default;
 
   .#{$ns}-popover-content {
     background: rgba($background-color, 1);
-    color: if(type_of($text-color) == color, if(rgba($text-color, 1) == $text-color, rgba($text-color, 1), $text-color), $text-color);
+    color: if(
+      type_of($text-color) == color,
+      if(rgba($text-color, 1) == $text-color, rgba($text-color, 1), $text-color),
+      $text-color
+    );
   }
 
   .#{$ns}-popover-arrow::before {

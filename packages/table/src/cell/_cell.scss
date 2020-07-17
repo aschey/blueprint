@@ -38,7 +38,7 @@
   }
 
   .#{$ns}-table-cell-ledger-odd {
-    background-color: rgba(mix($table-background-color, $cell-background-color, 50%), 1);
+    background-color: rgba($table-cell-odd, 1);
   }
 
   .#{$ns}-dark & {
@@ -47,7 +47,7 @@
     }
 
     .#{$ns}-table-cell-ledger-odd {
-      background-color: rgba(mix($dark-table-background-color, $dark-cell-background-color, 50%), 1);
+      background-color: rgba($dark-table-cell-odd, 1);
     }
   }
 }

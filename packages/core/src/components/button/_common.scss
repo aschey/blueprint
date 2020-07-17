@@ -297,7 +297,7 @@ $button-intents: (
 }
 
 @mixin pt-button-minimal() {
-  background: $minimal-button-background-color, 1;
+  background: $minimal-button-background-color;
   box-shadow: none;
 
   &:hover {
@@ -460,7 +460,7 @@ $button-intents: (
   &.#{$ns}-disabled,
   &:disabled:hover,
   &.#{$ns}-disabled:hover {
-    border-color: rgba($pt-text-color-disabled, 0.1);
+    border-color: rgba($pt-text-color-muted, 0.1);
   }
 
   .#{$ns}-dark & {

@@ -19,15 +19,15 @@ $dark-header-menu-hover-background:
 $selectable-header-menu-hover-background:
   menu-background($header-hover-background-color);
 $selectable-header-menu-selected-background:
-  menu-background(mix($pt-intent-primary, $header-background-color, 10%));
+  menu-background(mix($pt-intent-primary, $header-background-color, 10%)) !default;
 $selectable-header-menu-selected-hover-background:
-  menu-background(mix($pt-intent-primary, $header-hover-background-color, 10%));
+  menu-background(mix($pt-intent-primary, $header-hover-background-color, 10%)) !default;
 $dark-selectable-header-menu-hover-background:
   menu-background($dark-header-hover-background-color);
 $dark-selectable-header-menu-selected-background:
-  menu-background(mix($pt-intent-primary, $dark-header-background-color, 10%));
+  menu-background(mix($pt-intent-primary, $dark-header-background-color, 10%)) !default;
 $dark-selectable-header-menu-selected-hover-background:
-  menu-background(mix($pt-intent-primary, $dark-header-hover-background-color, 10%));
+  menu-background(mix($pt-intent-primary, $dark-header-hover-background-color, 10%)) !default;
 
 .#{$ns}-table-header {
   align-items: flex-start;
