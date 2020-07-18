@@ -336,10 +336,10 @@ $control-indicator-spacing: $pt-grid-size !default;
       }
 
       input#{$selector}:disabled ~ .#{$ns}-control-indicator {
-        background: rgba($disabled-color, 1);
+        background: get-color-rgba($disabled-color);
 
         &::before {
-          background: rgba($disabled-indicator-color, 1);
+          background: get-color-rgba($disabled-indicator-color);
         }
       }
     }
