@@ -49,7 +49,7 @@
       }
 
       .#{$ns}-popover-arrow-fill {
-        fill: $color;
+        fill: rgba($color, 1);
       }
     }
   }

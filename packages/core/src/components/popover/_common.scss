@@ -151,7 +151,7 @@ $dark-popover-background-color: $dark-gray4 !default;
   }
 
   .#{$ns}-popover-arrow-fill {
-    fill: $background-color;
+    fill: rgba($background-color, 1);
   }
 }
 
