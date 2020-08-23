@@ -138,7 +138,7 @@ export interface ITimePickerProps extends IProps {
      * The currently set time.
      * If this prop is provided, the component acts in a controlled manner.
      */
-    value?: Date;
+    value?: Date | null;
 }
 
 export interface ITimePickerState {
@@ -453,6 +453,8 @@ interface IKeyEventMap {
 function handleKeyEvent(e: React.KeyboardEvent<HTMLInputElement>, actions: IKeyEventMap, preventDefault = true) {
     for (const k of Object.keys(actions)) {
         const key = Number(k);
+        // HACKHACK: https://github.com/palantir/blueprint/issues/4165
+        // eslint-disable-next-line deprecation/deprecation
         if (e.which === key) {
             if (preventDefault) {
                 e.preventDefault();
