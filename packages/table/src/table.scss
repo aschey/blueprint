@@ -22,7 +22,6 @@ $row-z-index: $column-z-index + 1 !default;
 $menu-z-index: $row-z-index + 1 !default;
 
 .#{$ns}-table-container {
-  @include force-hardware-acceleration();
   background-color: rgba($table-background-color, 1);
   display: flex;
   flex-direction: column;
