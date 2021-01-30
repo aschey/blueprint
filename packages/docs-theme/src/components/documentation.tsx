@@ -80,6 +80,7 @@ export interface IDocumentationProps extends IProps {
     /**
      * Callback invoked to render "View source" links in Typescript interfaces.
      * The `href` of the link will be `entry.sourceUrl`.
+     *
      * @default "View source"
      */
     renderViewSourceLinkText?: (entry: ITsDocBase) => React.ReactNode;
@@ -98,6 +99,7 @@ export interface IDocumentationProps extends IProps {
 
     /**
      * HTML element to use as the scroll parent. By default `document.documentElement` is assumed to be the scroll container.
+     *
      * @default document.documentElement
      */
     scrollParent?: HTMLElement;
@@ -122,7 +124,9 @@ export class Documentation extends React.PureComponent<IDocumentationProps, IDoc
     private routeToPage: { [route: string]: string };
 
     private contentElement: HTMLElement;
+
     private navElement: HTMLElement;
+
     private refHandlers = {
         content: (ref: HTMLElement) => (this.contentElement = ref),
         nav: (ref: HTMLElement) => (this.navElement = ref),
@@ -247,7 +251,7 @@ export class Documentation extends React.PureComponent<IDocumentationProps, IDoc
         // hooray! so you don't have to!
         FocusStyleManager.onlyShowFocusOnTabs();
         this.scrollToActiveSection();
-        Utils.safeInvoke(this.props.onComponentUpdate, this.state.activePageId);
+        this.props.onComponentUpdate?.(this.state.activePageId);
         // whoa handling future history...
         window.addEventListener("hashchange", this.handleHashChange);
         document.addEventListener("scroll", this.handleScroll);
@@ -268,7 +272,7 @@ export class Documentation extends React.PureComponent<IDocumentationProps, IDoc
             this.maybeScrollToActivePageMenuItem();
         }
 
-        Utils.safeInvoke(this.props.onComponentUpdate, activePageId);
+        this.props.onComponentUpdate?.(activePageId);
     }
 
     private updateHash() {
@@ -289,6 +293,7 @@ export class Documentation extends React.PureComponent<IDocumentationProps, IDoc
     };
 
     private handleCloseNavigator = () => this.setState({ isNavigatorOpen: false });
+
     private handleOpenNavigator = () => this.setState({ isNavigatorOpen: true });
 
     private handleNavigation = (activeSectionId: string) => {
@@ -301,6 +306,7 @@ export class Documentation extends React.PureComponent<IDocumentationProps, IDoc
     };
 
     private handleNextSection = () => this.shiftSection(1);
+
     private handlePreviousSection = () => this.shiftSection(-1);
 
     private handleScroll = () => {
@@ -344,6 +350,7 @@ export class Documentation extends React.PureComponent<IDocumentationProps, IDoc
 
     private handleApiBrowserOpen = (activeApiMember: string) =>
         this.setState({ activeApiMember, isApiBrowserOpen: true });
+
     private handleApiBrowserClose = () => this.setState({ isApiBrowserOpen: false });
 }
 

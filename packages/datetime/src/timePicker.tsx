@@ -14,18 +14,10 @@
  * limitations under the License.
  */
 
-import {
-    Classes as CoreClasses,
-    DISPLAYNAME_PREFIX,
-    HTMLSelect,
-    Icon,
-    Intent,
-    IProps,
-    Keys,
-    Utils as BlueprintUtils,
-} from "@blueprintjs/core";
 import classNames from "classnames";
 import * as React from "react";
+
+import { Classes as CoreClasses, DISPLAYNAME_PREFIX, HTMLSelect, Icon, Intent, IProps, Keys } from "@blueprintjs/core";
 
 import * as Classes from "./common/classes";
 import * as DateUtils from "./common/dateUtils";
@@ -46,11 +38,13 @@ export const TimePrecision = {
     MINUTE: "minute" as "minute",
     SECOND: "second" as "second",
 };
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type TimePrecision = typeof TimePrecision[keyof typeof TimePrecision];
 
 export interface ITimePickerProps extends IProps {
     /**
      * Whether to focus the first input when it opens initially.
+     *
      * @default false
      */
     autoFocus?: boolean;
@@ -63,6 +57,7 @@ export interface ITimePickerProps extends IProps {
 
     /**
      * Whether the time picker is non-interactive.
+     *
      * @default false
      */
     disabled?: boolean;
@@ -94,24 +89,28 @@ export interface ITimePickerProps extends IProps {
 
     /**
      * The precision of time the user can set.
+     *
      * @default TimePrecision.MINUTE
      */
     precision?: TimePrecision;
 
     /**
      * Whether all the text in each input should be selected on focus.
+     *
      * @default false
      */
     selectAllOnFocus?: boolean;
 
     /**
      * Whether to show arrows buttons for changing the time.
+     *
      * @default false
      */
     showArrowButtons?: boolean;
 
     /**
      * Whether to use a 12 hour format with an AM/PM dropdown.
+     *
      * @default false
      */
     useAmPm?: boolean;
@@ -316,17 +315,17 @@ export class TimePicker extends React.Component<ITimePickerProps, ITimePickerSta
         }
     };
 
-    private getInputBlurHandler = (unit: TimeUnit) => (e: React.SyntheticEvent<HTMLInputElement>) => {
+    private getInputBlurHandler = (unit: TimeUnit) => (e: React.FocusEvent<HTMLInputElement>) => {
         const text = getStringValueFromInputEvent(e);
         this.updateTime(parseInt(text, 10), unit);
-        BlueprintUtils.safeInvoke(this.props.onBlur, e, unit);
+        this.props.onBlur?.(e, unit);
     };
 
-    private getInputFocusHandler = (unit: TimeUnit) => (e: React.SyntheticEvent<HTMLInputElement>) => {
+    private getInputFocusHandler = (unit: TimeUnit) => (e: React.FocusEvent<HTMLInputElement>) => {
         if (this.props.selectAllOnFocus) {
             e.currentTarget.select();
         }
-        BlueprintUtils.safeInvoke(this.props.onFocus, e, unit);
+        this.props.onFocus?.(e, unit);
     };
 
     private getInputKeyDownHandler = (unit: TimeUnit) => (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -337,11 +336,11 @@ export class TimePicker extends React.Component<ITimePickerProps, ITimePickerSta
                 (e.currentTarget as HTMLInputElement).blur();
             },
         });
-        BlueprintUtils.safeInvoke(this.props.onKeyDown, e, unit);
+        this.props.onKeyDown?.(e, unit);
     };
 
     private getInputKeyUpHandler = (unit: TimeUnit) => (e: React.KeyboardEvent<HTMLInputElement>) => {
-        BlueprintUtils.safeInvoke(this.props.onKeyUp, e, unit);
+        this.props.onKeyUp?.(e, unit);
     };
 
     private handleAmPmChange = (e: React.SyntheticEvent<HTMLSelectElement>) => {
@@ -373,7 +372,9 @@ export class TimePicker extends React.Component<ITimePickerProps, ITimePickerSta
     }
 
     private incrementTime = (unit: TimeUnit) => this.shiftTime(unit, 1);
+
     private decrementTime = (unit: TimeUnit) => this.shiftTime(unit, -1);
+
     private shiftTime(unit: TimeUnit, amount: number) {
         if (this.props.disabled) {
             return;
@@ -421,7 +422,7 @@ export class TimePicker extends React.Component<ITimePickerProps, ITimePickerSta
         }
 
         if (hasNewValue) {
-            BlueprintUtils.safeInvoke(this.props.onChange, newState.value);
+            this.props.onChange?.(newState.value);
         }
     }
 }

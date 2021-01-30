@@ -3,8 +3,6 @@
  */
 
 const { createKarmaConfig } = require("@blueprintjs/karma-build-scripts");
-const fs = require("fs");
-const path = require("path");
 
 module.exports = function (config) {
     const baseConfig = createKarmaConfig({
@@ -14,6 +12,10 @@ module.exports = function (config) {
             "src/accessibility/*",
             "src/common/abstractComponent*",
             "src/common/abstractPureComponent*",
+            "src/compatibility/*",
+            // deprecations
+            "src/common/utils/functionUtils.ts",
+            "src/common/utils/safeInvokeMember.ts",
         ],
     });
     config.set(baseConfig);

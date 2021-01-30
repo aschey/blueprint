@@ -18,7 +18,7 @@ import * as React from "react";
 
 import { IConstructor } from "../../common/constructor";
 import { HOTKEYS_WARN_DECORATOR_NEEDS_REACT_ELEMENT, HOTKEYS_WARN_DECORATOR_NO_METHOD } from "../../common/errors";
-import { getDisplayName, isFunction, safeInvoke } from "../../common/utils";
+import { getDisplayName, isFunction } from "../../common/utils";
 import { HotkeyScope, HotkeysEvents } from "./hotkeysEvents";
 import { IHotkeysProps } from "./hotkeysTypes";
 
@@ -30,7 +30,7 @@ export interface IHotkeysTargetComponent extends React.Component {
      * Components decorated with the `@HotkeysTarget` decorator must implement
      * this method, and it must return a `Hotkeys` React element.
      */
-    renderHotkeys(): React.ReactElement<IHotkeysProps>;
+    renderHotkeys: () => React.ReactElement<IHotkeysProps>;
 }
 
 export function HotkeysTarget<T extends IConstructor<IHotkeysTargetComponent>>(WrappedComponent: T) {
@@ -58,9 +58,7 @@ export function HotkeysTarget<T extends IConstructor<IHotkeysTargetComponent>>(W
         }
 
         public componentWillUnmount() {
-            if (super.componentWillUnmount != null) {
-                super.componentWillUnmount();
-            }
+            super.componentWillUnmount?.();
             document.removeEventListener("keydown", this.globalHotkeysEvents.handleKeyDown);
             document.removeEventListener("keyup", this.globalHotkeysEvents.handleKeyUp);
 
@@ -97,12 +95,12 @@ export function HotkeysTarget<T extends IConstructor<IHotkeysTargetComponent>>(W
 
                     const handleKeyDownWrapper = (e: React.KeyboardEvent<HTMLElement>) => {
                         this.localHotkeysEvents.handleKeyDown(e.nativeEvent as KeyboardEvent);
-                        safeInvoke(existingKeyDown, e);
+                        existingKeyDown?.(e);
                     };
 
                     const handleKeyUpWrapper = (e: React.KeyboardEvent<HTMLElement>) => {
                         this.localHotkeysEvents.handleKeyUp(e.nativeEvent as KeyboardEvent);
-                        safeInvoke(existingKeyUp, e);
+                        existingKeyUp?.(e);
                     };
                     return React.cloneElement(element, {
                         onKeyDown: handleKeyDownWrapper,
