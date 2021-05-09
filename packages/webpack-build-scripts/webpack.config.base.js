@@ -124,6 +124,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                use: require.resolve("source-map-loader"),
+            },
+            {
                 test: /\.tsx?$/,
                 loader: require.resolve("ts-loader"),
                 options: {
@@ -151,4 +155,7 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx", ".ts", ".tsx", ".scss"],
     },
+
+    // add support for IE11 (otherwise, webpack 5 uses some ES2015 syntax by default)
+    target: ["web", "es5"],
 };

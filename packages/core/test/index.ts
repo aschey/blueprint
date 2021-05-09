@@ -15,6 +15,7 @@
 
 import "@blueprintjs/test-commons/bootstrap";
 
+// components
 import "./alert/alertTests";
 import "./breadcrumbs/breadcrumbsTests";
 import "./breadcrumbs/breadcrumbTests";
@@ -48,6 +49,7 @@ import "./non-ideal-state/nonIdealStateTests";
 import "./overflow-list/overflowListTests";
 import "./overlay/overlayTests";
 import "./panel-stack/panelStackTests";
+import "./panel-stack2/panelStack2Tests";
 import "./popover/popoverTests";
 import "./popover/popperUtilTests";
 import "./portal/portalTests";
@@ -66,3 +68,6 @@ import "./toast/toasterTests";
 import "./toast/toastTests";
 import "./tooltip/tooltipTests";
 import "./tree/treeTests";
+
+// hooks
+import "./hooks/useHotkeysTests";
